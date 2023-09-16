@@ -222,15 +222,20 @@ public class ReproductorA extends javax.swing.JFrame {
         btnstop = new javax.swing.JButton();
         btnPause = new javax.swing.JButton();
         nombreSong = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPlaylist.setBackground(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(jPlaylist);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 402, 165));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 51, 51));
         jLabel2.setText("Reproductor De Musica ");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
 
         btnprevius.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nextF.png"))); // NOI18N
         btnprevius.addActionListener(new java.awt.event.ActionListener() {
@@ -238,6 +243,7 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnpreviusActionPerformed(evt);
             }
         });
+        getContentPane().add(btnprevius, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 90, 83));
 
         btnplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/playF1.png"))); // NOI18N
         btnplay.addActionListener(new java.awt.event.ActionListener() {
@@ -245,6 +251,7 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnplayActionPerformed(evt);
             }
         });
+        getContentPane().add(btnplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 92, -1));
 
         btnnext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/previousF.png"))); // NOI18N
         btnnext.addActionListener(new java.awt.event.ActionListener() {
@@ -252,6 +259,7 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnnextActionPerformed(evt);
             }
         });
+        getContentPane().add(btnnext, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 90, 83));
 
         btnadd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add.png"))); // NOI18N
         btnadd.setText("ADD");
@@ -260,6 +268,7 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnaddActionPerformed(evt);
             }
         });
+        getContentPane().add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 90, 90));
 
         btnstop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Stop.png"))); // NOI18N
         btnstop.addActionListener(new java.awt.event.ActionListener() {
@@ -267,6 +276,7 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnstopActionPerformed(evt);
             }
         });
+        getContentPane().add(btnstop, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 90, -1));
 
         btnPause.setBackground(new java.awt.Color(204, 0, 255));
         btnPause.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
@@ -276,61 +286,16 @@ public class ReproductorA extends javax.swing.JFrame {
                 btnPauseActionPerformed(evt);
             }
         });
+        getContentPane().add(btnPause, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, -1, -1));
 
         nombreSong.setFont(new java.awt.Font("SimSun", 3, 18)); // NOI18N
         nombreSong.setForeground(new java.awt.Color(0, 51, 51));
         nombreSong.setText("Reproduciendo: ");
+        getContentPane().add(nombreSong, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 430, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jLabel2))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(nombreSong, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(btnprevius, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(btnplay, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnstop, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnnext, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(btnPause))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel2)))
-                .addGap(20, 20, 20)
-                .addComponent(nombreSong)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnprevius, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnplay)
-                    .addComponent(btnstop)
-                    .addComponent(btnnext, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
-                .addComponent(btnPause))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo music.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -423,6 +388,7 @@ public class ReproductorA extends javax.swing.JFrame {
     private javax.swing.JButton btnplay;
     private javax.swing.JButton btnprevius;
     private javax.swing.JButton btnstop;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jPlaylist;
     private javax.swing.JScrollPane jScrollPane1;
