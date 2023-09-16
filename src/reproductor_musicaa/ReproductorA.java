@@ -124,7 +124,6 @@ public class ReproductorA extends javax.swing.JFrame {
       File songF;
     void next() throws FileNotFoundException, JavaLayerException{
         if (actualizaCanciones.isEmpty()) {
-        // La lista está vacía, no hay canciones que reproducir, puedes mostrar un mensaje o simplemente salir de la función.
         return;
     }
      if (inicio == 0) {
@@ -143,7 +142,7 @@ public class ReproductorA extends javax.swing.JFrame {
         String nombreCancion = songF.getName().replaceAll("\\.(mp3|wav)$", "");
         nombreCancion = nombreCancion;
 
-        // Actualizar el nombre de la canción en la etiqueta
+        // Actualizar el nombre de la cancion
         nombreSong.setText("Reproduciendo: " + nombreCancion);
 
         new Thread() {
@@ -165,8 +164,7 @@ public class ReproductorA extends javax.swing.JFrame {
     //i
      void previous() throws FileNotFoundException, JavaLayerException{
       if (actualizaCanciones.isEmpty()) {
-        // La lista está vacía, no hay canciones que reproducir, puedes mostrar un mensaje o simplemente salir de la función.
-        return;
+               return;
     }
            if (inicio == 0) {
         int firstSong = jPlaylist.getSelectedIndex() - 1;
